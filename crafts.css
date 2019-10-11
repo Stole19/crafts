@@ -1,0 +1,569 @@
+body{
+
+    overflow-x:hidden;
+    font-family: 'Times New Roman', Times, serif;
+   
+}
+
+
+.offset:before{
+
+  display:block;
+  content:'';
+  height: 4rem;
+  margin-top: -4rem;
+}
+
+
+
+
+
+/************************************************
+
+                PRELOADER
+
+************************************************/
+
+
+#preloader{
+  position: fixed;
+  top:0;
+  left:0;
+  right: 0;
+  bottom: 0;
+  background-color: #2d3142;
+  z-index: 999;
+}
+
+
+#status{
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left:50%;
+  top:60%;
+  margin: -100px 0 0 -100px;
+
+}
+
+
+@keyframes bouncing-loader {
+  to {
+    opacity: 0.1;
+    transform: translate3d(0, -1rem, 0);
+  }
+}
+.bouncing-loader {
+  display: flex;
+  justify-content: center;
+}
+.bouncing-loader > div {
+  width: 2rem;
+  height: 2rem;
+  margin: 3rem 0.2rem;
+  background: #8385aa;
+  border-radius: 50%;
+  animation: bouncing-loader 0.6s infinite alternate;
+}
+.bouncing-loader > div:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.bouncing-loader > div:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+
+
+
+
+/************************************************
+
+                NAVIGATION
+
+************************************************/
+
+
+.hide{
+
+  display:none;
+}
+
+.navbar{
+
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: .9rem;
+    letter-spacing: .3rem;
+    background: rgba(0,0,0,0.6)!important;
+}
+
+.navbar-brand img{
+    height: 2rem;
+}
+
+.navbar-nav li{
+
+    padding-right: .7rem;
+
+}
+
+.navbar-dark .navbar-nav .nav-link{
+
+    color:white;
+    padding-top: .6rem;
+}
+
+
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link:hover{
+
+    color:#1ebba3;
+
+}
+
+/************************************************
+
+                LANDING PAGE
+
+************************************************/
+
+#landing-page{
+
+    width: 100%;
+    height: 100vh;
+    background: url('../images/download.jpg') top center;
+    background-size: cover;
+    position: relative;
+}
+
+.caption{
+
+    widows: 100%;
+    max-width: 100%;
+    position: absolute;
+    top:55%;
+    left:33%;
+    z-index: 1;
+}
+
+.caption h1{
+
+    color:white;
+    font-size: 3rem;
+    font-weight: 500;
+    letter-spacing: .3rem;
+    text-shadow: .1rem .1rem .8rem black;
+    padding-bottom: 1rem;
+}
+
+.caption h3{
+
+    color:white;
+    font-size: 1.5rem;
+    text-shadow: .1rem .1rem .5rem black;
+    padding-bottom: 1.6rem;
+
+}
+
+.btn-lg{
+
+    border-width: medium;
+    border-radius: 5%;
+    padding: .6rem 1.3rem;
+    font-size: 1.1rem;
+}
+
+
+@media (max-width: 480px) and (min-width: 320px){
+
+  .caption h1{
+
+    font-size: 2rem;
+  }
+
+
+  .caption h3{
+
+    font-size: 1rem;
+  }  
+
+
+  .caption .btn-lg{
+
+    font-size: .8rem;
+  }
+
+}
+
+
+
+/************************************************
+
+                ABOUT US
+
+************************************************/
+
+.about h1{
+  font-family: 'Kaushan Script', cursive;
+}
+
+.about-img__container{
+
+    position: relative;
+    top:0;
+    left:5%;
+}
+
+.about-img__container::before{
+
+    content: '';
+    position: absolute;
+    top:-1.5rem;
+    left:-1.7rem;
+    width: 100%;
+    height:100%;
+    outline: .5rem solid orange;
+    z-index: -1;
+    transition: all 1s linear;
+}
+
+.about-img__container:hover:before{
+
+    top:0;
+    left:0;
+}
+
+.about p{
+
+    font-size:20px;
+    color:black!important;
+}
+
+.button {
+  background-color: transparent;
+  border: none;
+  color: #000;
+  outline: none;
+  padding: 12px 40px 10px;
+  position: relative;
+}
+.button:before,
+.button:after {
+  border: 0 solid transparent;
+  transition: all 0.25s;
+  content: '';
+  height: 24px;
+  position: absolute;
+  width: 24px;
+}
+.button:before {
+  border-top: 2px solid #000;
+  left: 0px;
+  top: -8px;
+}
+.button:after {
+  border-bottom: 2px solid #000;
+  bottom: -8px;
+  right: 0px;
+}
+.button:hover {
+  background-color: orange;
+}
+.button:hover:before,
+.button:hover:after {
+  height: 100%;
+  width: 100%;
+}
+
+
+
+/************************************************
+
+                GALLERY
+
+************************************************/
+
+  #gallery{
+    background: #2d3142!important;
+    padding-bottom: 30px;
+  }
+
+  #gallery h1{
+
+    color:white;
+    font-family: 'Kaushan Script', cursive;
+  }
+
+.gallery{
+
+  margin: 30px;
+  padding-bottom: 20px;
+  
+}
+
+.gallery img{
+
+  width:230px;
+  padding: 5px;
+  filter: grayscale(100%);
+  transition: 1s all;
+}
+
+.gallery img:hover{
+  
+  filter:grayscale(0);
+  transform: scale(1.1);
+}
+
+
+/************************************************
+
+                FEATURES
+
+************************************************/
+  
+#features{
+
+  background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url('../images/workshop_background.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;  
+  z-index: -1;
+  color:white;
+  padding:7rem 2rem;
+}
+   
+.heading-underline{
+
+  width: 3rem;
+  height: .2rem;
+  background-color: #1ebba3;
+  margin:0 auto 2rem;
+
+}
+
+
+.feature .fab{
+
+  color:#1ebba3;
+}
+
+.feature .fas{
+
+  color:#1ebba3;
+}  
+  
+
+#features h1{
+
+  font-family: 'Kaushan Script', cursive;
+}
+
+.feature h3{
+
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  margin-top:1.5rem;
+  margin-bottom: 2rem;
+
+} 
+
+.feature p{
+
+  font-size: 1.1rem;
+  margin-top:1.5rem;
+}
+  
+
+/************************************************
+
+                CLIENTS
+
+************************************************/
+
+
+.clients img{
+
+  width:100%;
+  border-radius: 50%;
+}
+
+blockquote .fas{
+
+  color:#1ebba3;
+  
+}
+
+.clients-hr{
+
+  border-top: .05rem solid #1ebba3;
+}
+
+#clients h1{
+
+  font-family: 'Kaushan Script', cursive;
+
+}
+
+
+/************************************************
+
+                BROSHURE
+
+************************************************/
+
+#broshure{
+  background-color: whitesmoke;
+  margin-bottom: 7%;
+  
+}
+
+
+@media (max-width: 480px) and (min-width: 320px){
+
+  #broshure h4{
+
+    font-size: 1.5rem;
+  }
+}
+
+
+
+
+/************************************************
+
+                CONTACT
+
+************************************************/
+
+#map{
+
+  height:450px;
+  width: 100%;
+}
+
+#contact{
+
+  background-color: #2d3142;
+  
+}
+
+
+.contact-container{
+
+  max-width: 90vw;
+  margin:0 auto;
+  display: grid;
+  grid-row-gap: 1rem;
+}
+
+
+.contact-info{
+
+  display:grid;
+  justify-content: center;
+}
+
+.contact-item{
+
+  margin:1rem 0;
+  padding: .5rem;
+}
+
+.contact-item__icon{
+
+  font-size: 3rem;
+  text-align: center;
+  color:yellow;
+}
+
+.contact-item__title{
+
+  text-transform: capitalize;
+  text-align: center;
+  margin:.5rem 0;
+  letter-spacing: .25rem;
+  font-style: italic;
+  color:white;
+}
+
+.contact-item__text{
+
+  font-size: 1rem;
+  text-transform: capitalize;
+  color:white;
+  text-align: center;
+}
+
+#contact h1{
+
+  text-transform: capitalize;
+  font-family: 'Kaushan Script', cursive;
+  text-align: center;
+  color:white;
+}
+
+
+@media screen and (min-width:768px){
+
+  .contact-info{
+
+      grid-template-columns: repeat(3,1fr);
+      order: 0;
+  }
+}
+
+
+
+/************************************************
+
+                CONTACT ICONS
+
+************************************************/
+
+.footer-icon{
+  
+  font-size: 1.5rem;
+  color:white;
+  transition: all .7s ease-in-out;
+
+}
+
+.footer-icon:hover{
+  color:rgb(66, 192, 235);
+}
+
+
+
+/************************************************
+
+                SCROLL TO TOP
+
+************************************************/
+
+
+
+.scrollTop{
+  position: fixed;
+  bottom:20px;
+  right:20px;
+  width:40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  background: transparent;
+  color: whitesmoke!important;
+  z-index: 999;
+  display:none;
+  transition: all .5s linear;
+}
+
+
+.scrollTop:hover{
+
+  background: black;
+  color:#fff!important;
+}
+
